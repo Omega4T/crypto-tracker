@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.coin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.coin:hover {
+    transform: scale(1.03);
+}
+
+.coin-info{
+    display: flex;
+    align-items: center;
+}
+
+.coin-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.coin-name {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.coin-price {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.selector-container {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+#currency-selector {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#currency-selector:focus {
+    outline: none;
+    border-color: #007bff;
+}

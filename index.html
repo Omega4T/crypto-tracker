@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Crypto Prices</h1>
+
+        <div class="selector-container">
+            <label for="currency-selector">Select Currency: </label>
+             <select id="currency-selector">
+                <option value="idr">Rupiah (IDR)</option>
+                <option value="usd">US Dollar (USD)</option>
+                <option value="eur">Euro (EUR)</option>
+                <option value="jpy">Japanese Yen (JPY)</option>
+                <option value="sgd">Singapore Dollar (SGD)</option>
+            </select>
+        </div>
+        <div id="crypto-container">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
