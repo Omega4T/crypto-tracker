@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <h1>Live Crypto Prices</h1>
-
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search crypto">
+        </div>
         <div class="selector-container">
             <label for="currency-selector">Select Currency: </label>
              <select id="currency-selector">
@@ -20,9 +22,22 @@
                 <option value="sgd">Singapore Dollar (SGD)</option>
             </select>
         </div>
+        <div id="loader"></div>
         <div id="crypto-container">
         </div>
     </div>
+    <div id="chart-modal" class="modal hide">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Chart</h2>
+                <button id="close-modal" class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <canvas id="price-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

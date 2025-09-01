@@ -41,6 +41,8 @@ h1 {
 .coin-info{
     display: flex;
     align-items: center;
+    min-width: 0;
+    margin-right: 10px;
 }
 
 .coin-info img {
@@ -78,4 +80,119 @@ h1 {
 #currency-selector:focus {
     outline: none;
     border-color: #007bff;
+}
+
+.search-container{
+    margin-bottom: 25px;
+}
+
+#search-input{
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#search-input::placeholder{
+    color: #777
+}
+
+#search-input:focus{
+    outline: none;
+    border-color: #007bff;
+}
+
+#loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #444;
+    border-top-color: #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+.modal{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-title{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.close-button{
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 2em;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-button:hover{
+    color: #fff;
+}
+
+@keyframes slide-down{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@media(max-width: 500px) {
+    .coin {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .coin-price{
+        font-size: 1.3em;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+    .coin-name{
+        font-size: 1em;
+    }
 }
